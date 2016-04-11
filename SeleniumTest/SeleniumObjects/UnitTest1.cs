@@ -9,6 +9,8 @@ namespace SeleniumObjects
         [TestMethod]
         public void TestMethod1()
         {
+            var x = 25;
+            var y = x + 30;
         }
     }
 }
