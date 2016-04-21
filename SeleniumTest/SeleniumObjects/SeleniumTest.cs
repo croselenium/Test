@@ -17,7 +17,7 @@ namespace SeleniumObjects
     [TestClass]
     public class SeleniumTest
     {
-        protected TestContext testContextInstance = null;  //was public
+        protected TestContext testContextInstance = null;  
 
         public TestContext TestContext
         {
