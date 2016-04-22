@@ -41,7 +41,8 @@ namespace SeleniumObjects.Pages
 
         public void LoginToPage(string userName, string password)
         {
-            txtUserName.SendKeys(userName);
+            //txtUserName.SendKeys(userName);
+            txtUserName.SetText(userName);  //extension method
             txtPassword.SendKeys(password);
             btnLogin.Click();
         }

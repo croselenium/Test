@@ -70,6 +70,8 @@
   <ItemGroup>
     <Compile Include="PageCollection.cs" />
     <Compile Include="Pages\Login.cs" />
+    <Compile Include="Pages\UserForm.cs" />
+    <Compile Include="SeleniumExtensionMethods.cs" />
     <Compile Include="SeleniumPage.cs" />
     <Compile Include="SeleniumTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
