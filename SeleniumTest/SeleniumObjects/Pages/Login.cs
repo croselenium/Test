@@ -14,7 +14,9 @@ namespace SeleniumObjects.Pages
             : base(driver)
         {
         }
-        
+
+        #region ELEMENTS
+
         private IWebElement txtUserName 
         {
             get
@@ -39,13 +41,18 @@ namespace SeleniumObjects.Pages
             } 
         }
 
+        #endregion
+
+        #region METHODS
+
         public void LoginToPage(string userName, string password)
         {
-            //txtUserName.SendKeys(userName);
             txtUserName.SetText(userName);  //extension method
-            txtPassword.SendKeys(password);
+            txtPassword.SetText(password);
             btnLogin.Click();
         }
-         
+
+        #endregion
+
     }
 }

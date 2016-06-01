@@ -45,11 +45,37 @@ namespace SeleniumObjects
 
                     if (popup.Url.Contains(url))
                     {
-                        //waitForCoverallToDisappear(10);  //implement - cover on login (aiq only)
                         return parentWindowsHandler;
                     }
                 }
                 System.Threading.Thread.Sleep(1000);
+            }
+            throw new Exception("Can't connect to screen after 10 seconds");
+        }
+
+        /// <summary>
+        /// Navigates to URL that is not part of tested web page (not in app.config).
+        /// </summary>
+        protected internal string NavigateTo(string url)
+        {
+            if (_driver.Url != url)
+            {
+                try
+                {
+                    for (int i = 0; i < 10; i++)
+                    {
+                        _driver.Navigate().GoToUrl(url);
+
+                        if (_driver.Url.Contains(url))
+                        {
+                            return _driver.CurrentWindowHandle;
+                        }
+                    }
+                    System.Threading.Thread.Sleep(1000);
+                }
+                catch (Exception)
+                {
+                }   
             }
             throw new Exception("Can't connect to screen after 10 seconds");
         }

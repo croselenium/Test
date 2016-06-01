@@ -68,7 +68,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Controls\WebDropDownElement.cs" />
+    <Compile Include="Controls\WebRadioGroupElement.cs" />
     <Compile Include="PageCollection.cs" />
+    <Compile Include="Pages\DietMenuGenerator.cs" />
     <Compile Include="Pages\Login.cs" />
     <Compile Include="Pages\UserForm.cs" />
     <Compile Include="SeleniumExtensionMethods.cs" />

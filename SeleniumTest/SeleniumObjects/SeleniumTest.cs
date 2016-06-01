@@ -17,8 +17,12 @@ namespace SeleniumObjects
     [TestClass]
     public class SeleniumTest
     {
-        protected TestContext testContextInstance = null;  
+        protected TestContext testContextInstance = null;
 
+        /// <summary>
+        ///Gets or sets the test context which provides
+        ///information about and functionality for the current test run.
+        ///</summary>
         public TestContext TestContext
         {
             get
@@ -97,13 +101,8 @@ namespace SeleniumObjects
         [TestCleanup()]
         public void CleanupMyTest()
         {
+            TestContext.AddResultFile(driver.TakeScreenshot("FinalScreen"));
             driver.Quit();
         }
-
-        protected void TakeScreenshot()  
-        {
-            //implement
-        }
-
     }
 }

@@ -12,9 +12,17 @@ namespace SeleniumObjects.Tests
     public class TestExample: SeleniumTest
     {
         [TestMethod]
-        public void ExecuteTest()
+        public void ExecuteAutomationSeleniumTest()
         {
             page.Login.LoginToPage("TestUser","password");
+            page.UserForm.SetNewUser("Mr.","QA","Tomica","Ambruš",false,"hindi");
+        }
+
+        [TestMethod]
+        public void TestDietMenuGenerator()
+        {
+            page.DietMenuGenerator.NavigateTo();
+            page.DietMenuGenerator.GenerateMyDiet("10 x Double Cheeseburgers", "I don't wan't to be on diet!", 5, "Tomo", "Tomić", "tom@mail.com");
         }
     }
 }

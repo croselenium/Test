@@ -24,5 +24,21 @@ namespace SeleniumObjects
             }
         }
 
+        public Pages.UserForm UserForm
+        {
+            get
+            {
+                return new Pages.UserForm(_driver);
+            }
+        }
+
+        public Pages.DietMenuGenerator DietMenuGenerator
+        {
+            get
+            {
+                return new Pages.DietMenuGenerator(_driver);
+            }
+        }
+
     }
 }
